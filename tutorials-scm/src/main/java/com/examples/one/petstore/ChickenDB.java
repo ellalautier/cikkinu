@@ -22,18 +22,21 @@ public class ChickenDB{
 		}else{
 			System.out.println("Error 404: chicken not found");
 			return false;
+		}
 	}
 
 
 	Chicken getChicken(int id){
-	
+		return chickens.get(id);
 	}
 	
 	
 	int countChickens(){
-	
+		return chickens.size();
 	
 	}
+	
+}
 
 
 
