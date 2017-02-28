@@ -1,8 +1,8 @@
+package com.examples.one.petstore;
 import java.util.*;
 public class ChickenDB{
 	
-	
-	ArrayList<Chicken> chickens = new ArrayList<>();
+	ArrayList<Chicken> chickens = new ArrayList<Chicken>();
 	
 	boolean addChicken(Chicken c){
 		if(chickens.size()<10){
@@ -33,12 +33,7 @@ public class ChickenDB{
 	
 	int countChickens(){
 		return chickens.size();
-	
 	}
 	
 }
 
-
-
-
-}
