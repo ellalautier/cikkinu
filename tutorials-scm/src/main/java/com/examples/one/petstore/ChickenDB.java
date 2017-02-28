@@ -6,7 +6,7 @@ public class ChickenDB{
 	
 	boolean addChicken(Chicken c){
 		if(chickens.size()<10){
-			chicken.add(c);
+			chickens.add(c);
 			return true;
 		}else {
 			System.out.println("Error: too many chickens");
