@@ -16,7 +16,12 @@ public class ChickenDB{
 	}
 	
 	boolean delChicken(int id){
-		
+		if(chickens.size>=id){
+			chickens.remove(id);
+			return true;
+		}else{
+			System.out.println("Error 404: chicken not found");
+			return false;
 	}
 
 
