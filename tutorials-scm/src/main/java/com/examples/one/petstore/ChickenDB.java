@@ -4,7 +4,7 @@ public class ChickenDB{
 	
 	ArrayList<Chicken> chickens = new ArrayList<Chicken>();
 	
-	boolean addChicken(Chicken c){
+	public boolean addChicken(final Chicken c){
 		if(chickens.size() < 10){
 			chickens.add(c);
 			return true;
@@ -14,8 +14,8 @@ public class ChickenDB{
 		}
 		
 	}
-	
-	boolean delChicken(int id){
+
+    public boolean delChicken(final int id){
 		if(chickens.size() >= id){
 			chickens.remove(id);
 			return true;
@@ -25,15 +25,12 @@ public class ChickenDB{
 		}
 	}
 
-
-	Chicken getChicken(int id){
+    public Chicken getChicken(int id){
 		return chickens.get(id);
 	}
-	
-	
-	int countChickens(){
+
+    public int countChickens(){
 		return chickens.size();
 	}
-	
 }
 
