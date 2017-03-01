@@ -57,25 +57,10 @@ public class TestKitten {
     }
 
     @Test
-    public void test_loudCluck() {
-        kitten.setLoudCluck(true);
-        assertEquals(kitten.isLoudMeow(), true);
-        kitten.setLoudCluck(false);
-        assertEquals(kitten.isLoudMeow(), false);
-    }
-
-    @Test
-    public void test_exerciseRequired() {
-        final int newExercise = (int) (Math.random()*100);
-        kitten.setExerciseRequiredPerDay(newExercise);
-        assertEquals(kitten.getExerciseRequiredPerDay(), newExercise);
-    }
-
-    @Test
-    public void test_friendlyWithChildren() {
-        kitten.setFriendlyWithChildren(true);
-        assertEquals(kitten.isFriendlyWithChildren(), true);
-        kitten.setFriendlyWithChildren(false);
-        assertEquals(kitten.isFriendlyWithChildren(), false);
+    public void test_sensitiveToFeeding() {
+        kitten.setSensitiveToFeeding(true);
+        assertEquals(kitten.isSensitiveToFeeding(), true);
+        kitten.setSensitiveToFeeding(false);
+        assertEquals(kitten.isSensitiveToFeeding(), false);
     }
 }

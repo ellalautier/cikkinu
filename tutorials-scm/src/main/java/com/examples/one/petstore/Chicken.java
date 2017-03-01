@@ -1,41 +1,13 @@
 package com.examples.one.petstore;
 
-public class Chicken {
+public class Chicken extends Pet {
 
-    private int id;
-    private String name, breed;
     private boolean loudCluck;
     private int exerciseRequiredPerDay;
     private boolean friendlyWithChildren;
 
-    public Chicken(int id, String name, String breed) {
-        this.id = id;
-        this.name = name;
-        this.breed = breed;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
+    public Chicken(final int id, final String name, final String breed) {
+        super(id, name, breed);
     }
 
     public boolean isLoudCluck() {
