@@ -23,12 +23,7 @@ public class ChickenDB {
     public boolean delChicken(final int id) {
 
         final int previousSize = chickens.size();
-        //chickens.removeIf(chick -> chick.getId() == id);
-        for (final Chicken chick : chickens) {
-            if (chick.getId() == id) {
-                chickens.remove(chick);
-            }
-        }
+        chickens.removeIf(chick -> chick.getId() == id);
         return chickens.size() < previousSize;
     }
 
