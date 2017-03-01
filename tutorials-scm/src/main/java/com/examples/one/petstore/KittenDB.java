@@ -7,11 +7,12 @@ import java.util.*;
 
 public class KittenDB {
 
-    ArrayList<Kitten> kittens = new ArrayList<Kitten>();
+    private ArrayList<Kitten> kittens = new ArrayList<Kitten>();
+    private final static int MAXKITTENS = 5;
 
     public boolean addKitten(final Kitten c) {
 
-        if (kittens.size() < 10) {
+        if (kittens.size() < MAXKITTENS) {
             kittens.add(c);
             return true;
         } else {
@@ -40,6 +41,10 @@ public class KittenDB {
 
     public int countKittens() {
         return kittens.size();
+    }
+
+    public int getMaxKittens() {
+        return MAXKITTENS;
     }
 }
 

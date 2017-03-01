@@ -64,4 +64,15 @@ public class TestChickenDB {
             assertEquals(chickDB.delChicken(chick.getId()), true);
         }
     }
+
+    @Test
+    public void test_addKitten_moreThanMax() {
+
+        for (int i = 0; i < chickDB.getMaxChickens(); i++) {
+            chickDB.addChicken(new Chicken(i, "Name " + i, "Breed " + i));
+        }
+        assertEquals(chickDB.countChickens(), chickDB.getMaxChickens());
+        assertEquals(chickDB.addChicken(new Chicken(-1, "Name " + -1, "Breed " + -1)), false);
+        assertEquals(chickDB.countChickens(), chickDB.getMaxChickens());
+    }
 }

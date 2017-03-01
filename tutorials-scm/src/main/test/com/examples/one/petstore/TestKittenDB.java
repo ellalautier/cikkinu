@@ -64,4 +64,15 @@ public class TestKittenDB {
             assertEquals(kittenDB.delKitten(kitten.getId()), true);
         }
     }
+
+    @Test
+    public void test_addKitten_moreThanMax() {
+
+        for (int i = 0; i < kittenDB.getMaxKittens(); i++) {
+            kittenDB.addKitten(new Kitten(i, "Name " + i, "Breed " + i));
+        }
+        assertEquals(kittenDB.countKittens(), kittenDB.getMaxKittens());
+        assertEquals(kittenDB.addKitten(new Kitten(-1, "Name " + -1, "Breed " + -1)), false);
+        assertEquals(kittenDB.countKittens(), kittenDB.getMaxKittens());
+    }
 }

@@ -6,11 +6,12 @@ import java.util.*;
 
 public class ChickenDB {
 
-    ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+    private ArrayList<Chicken> chickens = new ArrayList<Chicken>();
+    private final static int MAXCHICKENS = 10;
 
     public boolean addChicken(final Chicken c) {
 
-        if (chickens.size() < 10) {
+        if (chickens.size() < MAXCHICKENS) {
             chickens.add(c);
             return true;
         } else {
@@ -39,6 +40,10 @@ public class ChickenDB {
 
     public int countChickens() {
         return chickens.size();
+    }
+
+    public int getMaxChickens() {
+        return MAXCHICKENS;
     }
 }
 
